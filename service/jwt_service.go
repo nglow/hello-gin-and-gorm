@@ -3,7 +3,6 @@ package service
 import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
-	"os"
 	"time"
 )
 
@@ -32,7 +31,8 @@ func NewJwtService() JwtService {
 }
 
 func getSecretKey() string {
-	secretKey := os.Getenv("JWT_SECRET")
+	//secretKey := os.Getenv("JWT_SECRET")
+	secretKey := "ndoom90secret"
 	if secretKey != "" {
 		secretKey = "ndoom90"
 	}

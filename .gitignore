@@ -25,5 +25,6 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/go
 
-### Goland ###
+### Addtional ###
 .idea
+.DS_Store
