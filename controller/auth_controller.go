@@ -1,6 +1,6 @@
 package controller
 
-import (
+import  (
 	"github.com/gin-gonic/gin"
 	"helloGinAndGorm/dto"
 	"helloGinAndGorm/entity"
@@ -11,6 +11,7 @@ import (
 )
 
 // AuthController interface is a contract what this controller can do
+
 type AuthController interface {
 	Login(ctx *gin.Context)
 	Register(ctx *gin.Context)
