@@ -19,9 +19,9 @@ func SetupDatabaseConnection() *gorm.DB {
 	//dbPass := os.Getenv("DB_PASS")
 	//dbHost := os.Getenv("DB_HOST")
 	//dbName := os.Getenv("DB_NAME")
-	dbUser := "root"
-	dbPass := "kiosk"
-	dbHost := "localhost"
+	dbUser := "testuser"
+	dbPass := "testpassword"
+	dbHost := "helloginandgorm_mysql_1"
 	dbName := "hello_gin_and_gorm"
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?charset=utf8&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbName)

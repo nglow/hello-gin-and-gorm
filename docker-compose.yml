@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  go:
+    build: .
+    image: go-server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    restart: unless-stopped # 컨테이너를 명시적으로 stop 하기 전까지 항상 재시작함
+
+  mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=testuser
+      - MYSQL_PASSWORD=testpassword
+      - MYSQL_DATABASE=hello_gin_and_gorm
+    ports:
+      - "3306:3306"
+    restart: unless-stopped # 컨테이너를 명시적으로 stop 하기 전까지 항상 재시작함
+
+
